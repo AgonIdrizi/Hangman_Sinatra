@@ -53,14 +53,13 @@ get "/" do
   incorrect = hangman.player.arr_incorect.join(" ")
   count = hangman.player.count_words_remaining
 
-if count == 0 && correct.include?("_")
-  message = "Game is over, correct word is #{word}"
-  hangman = Hangman.new
-elsif count >=0 && !correct.include?("_")
-  message = "You guessed right"
-  hangman = Hangman.new
-end
-
+ if count == 0 && correct.include?("_")
+   message = "Game is over, correct word is #{word}"
+   hangman = Hangman.new
+ elsif count >=0 && !correct.include?("_")
+   message = "You guessed right"
+   hangman = Hangman.new
+ end
 
 
 erb :index, :locals => {:message => message,:word => word, :correct => correct.upcase, :incorrect => incorrect.upcase, :count => count}
