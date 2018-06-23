@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" />
+	<h1>HANGMAN</h1>
+</head>
+<body>
+  
+
+	<div class="guessed_letters">
+	  <p><%= correct %></p>
+	</div>
+	<div class="incorrect_guessed">
+	  <p>Missed letters: <%= incorrect %></p>
+	</div>
+	<div class="guesses_left">
+	  <p>Remaining guesses: <%= count %></p>
+	</div>
+	
+	<div class="div_form">
+	  <form>
+	    <label for="guess">Guess a letter</label>
+	    <input id="letter_guess" type ="text" name="letter" maxlength="1" size="2" autofocus />
+	    <input id="sub_button" type="submit" name="submit_guess" value="Guess" />
+	  </form>
+	</div>
+
+	<p>
+	  <form method='post' action='runMethod'>
+	    <input type="submit" value="new game">
+	  </form>
+	</p>
+	<div class="end_game_message">
+	 <h2><%= message %></h2>
+	</div>
+</body>
+</html>

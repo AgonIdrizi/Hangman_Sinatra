@@ -1,0 +1,12 @@
+--- !ruby/object:Hangman
+choosen_word: slink
+player: !ruby/object:Player
+  arr_correct:
+  - s
+  - _
+  - _
+  - _
+  - _
+  arr_incorect:
+  - h
+  - a
