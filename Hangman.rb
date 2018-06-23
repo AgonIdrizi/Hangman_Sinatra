@@ -1,7 +1,7 @@
 require "./Player.rb"
 require 'yaml'
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 
 class Hangman
   	attr_accessor :choosen_word, :player
